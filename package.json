@@ -1,0 +1,19 @@
+{
+	"name": "javascriptmodules"
+    ,"description": "JavaScript modules"
+	,"keywords": ["javascript", "nodeJS", "RequireJS"]
+    , "version": "0.1.0"	
+	, "author": {
+		"name": "PI & Mash"
+		, "email": "pete@piandmash.com"
+	}
+	, "maintainers": [
+		{ "name": "Pete Cleary"	}
+	]
+    , "dependencies": {
+    }
+    , "devDependencies": {
+    }
+    , "scripts": {
+    }
+}

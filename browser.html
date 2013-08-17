@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JavaScript modules</title>
+    <script type="text/javascript" src="myFriendsModule.js"></script>
+    <script type="text/javascript" src="myModule.js"></script>
+    <script type="text/javascript">
+        //basic run function to show the results
+        function run() {
+            var result = myModule.sayHelloFromMe() + "<br />" + myModule.sayHelloFromMyFriend();
+            document.getElementById("results").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript modules</h1>
+    <p>Please note the order of the included modules, to reference a module within a module it must first be loaded within the browser.</p>
+    <p><input type="button" onclick="run()" value="Click me to run" /></p>
+    <h2>Results</h2>
+    <div id="results"></div>
+</body>
+</html>

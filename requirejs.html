@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JavaScript modules</title>
+    <script type="text/javascript" src="libs/require.js"></script>
+    <script type="text/javascript">
+        //basic run function to show the results
+        function run() {
+            var result = myModule.sayHelloFromMe() + "<br />" + myModule.sayHelloFromMyFriend();
+            document.getElementById("results").innerHTML = result;
+        }
+
+        //add in the my module as a variable
+        var myModule = null;
+        //first load the myModule using requireJS which will inturn load the friends module
+        require(["myModule"], function (myMod) {
+            myModule = myMod;
+        });
+    </script>
+</head>
+<body>
+    <h1>JavaScript modules</h1>
+    <p>Require JS will load up the myFriendsModule for you.</p>
+    <p><input type="button" onclick="run()" value="Click me to run" /></p>
+    <h2>Results</h2>
+    <div id="results"></div>
+</body>
+</html>
